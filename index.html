@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#A77FCC">
+  <title>Learnora. Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator" aria-label="Learnora calculator">
+    <section class="display-area">
+      <input id="display" class="display" type="text" inputmode="decimal"
+             autocomplete="off" spellcheck="false" aria-label="Calculator display"
+             placeholder="0">
+      <div class="top-bar">
+        <button id="theme-toggle" class="small-button" type="button" aria-label="Toggle dark mode">🌙</button>
+        <div class="brand">✨ Learnora. ✨</div>
+        <button id="about-button" class="small-button" type="button" aria-label="About Learnora">ℹ️</button>
+      </div>
+    </section>
+
+    <section class="history-section" aria-label="Calculation history">
+      <div class="section-title">History</div>
+      <ol id="history" class="history-list"></ol>
+      <button id="clear-history" class="clear-history" type="button">🗑 Clear History</button>
+    </section>
+
+    <section id="keypad" class="keypad" aria-label="Calculator keypad">
+      <button class="key" data-action="square">x²</button>
+      <button class="key" data-action="sqrt">√</button>
+      <button class="key" data-action="percent">%</button>
+      <button class="key" data-action="backspace">⌫</button>
+
+      <button class="key" data-value="(">(</button>
+      <button class="key" data-value=")">)</button>
+      <button class="key" data-value="/">/</button>
+      <button class="key clear-key" data-action="clear">C</button>
+
+      <button class="key" data-value="7">7</button>
+      <button class="key" data-value="8">8</button>
+      <button class="key" data-value="9">9</button>
+      <button class="key" data-value="*">x</button>
+
+      <button class="key" data-value="4">4</button>
+      <button class="key" data-value="5">5</button>
+      <button class="key" data-value="6">6</button>
+      <button class="key" data-value="-">-</button>
+
+      <button class="key" data-value="1">1</button>
+      <button class="key" data-value="2">2</button>
+      <button class="key" data-value="3">3</button>
+      <button class="key" data-value="+">+</button>
+
+      <button class="key" data-value="0">0</button>
+      <button class="key" data-value=".">.</button>
+      <button class="key equals-key" data-action="calculate">=</button>
+      <div class="bear" aria-label="Teddy bear">🧸</div>
+    </section>
+
+    <footer>💖 ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა Made with love &amp; math fun! ✨</footer>
+  </main>
+
+  <dialog id="about-dialog" class="about-dialog">
+    <button id="close-dialog" class="dialog-close" type="button" aria-label="Close">×</button>
+    <h2>💜 Learnora. Calculator 💜</h2>
+    <p>Made with love using Python &amp; Tkinter.</p>
+    <p>Designed to make math fun, friendly, and cute! 😎✨</p>
+  </dialog>
+
+  <dialog id="fact-dialog" class="about-dialog">
+    <button id="close-fact" class="dialog-close" type="button" aria-label="Close">×</button>
+    <h2>Fun Fact! ✨</h2>
+    <p id="fact-text"></p>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
